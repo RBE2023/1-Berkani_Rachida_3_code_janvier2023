@@ -1,0 +1,664 @@
+/****** General ***********/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin: auto;
+    /* background-color: aqua; */
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+}
+
+.LogoBooki {
+    height: 29px;
+    margin-top: 15px;
+}
+
+.NavbarContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.NavbarContain {
+    display: flex;
+    list-style: none;
+}
+
+.NavbarContain li {
+    margin: 5px;
+    padding: 15px 10px;
+}
+
+.NavbarContain a {
+    display: flex;
+    color: black;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    width: 170px;
+    font-size: 20px;
+}
+
+/* ###  -- HOVER Bleu-- EFFET DE SURVOL -- ### */
+#Hebergements :hover {
+    border-top: solid #0065FC 3px;
+    font-weight: 600;
+}
+
+#Activites :hover {
+    border-top: solid #0065FC 3px;
+    font-weight: 600;
+}
+
+
+h1 {
+    margin-top: 40px;
+}
+
+/* ************* FORMULAIRE DE RECHERCHE ***********  */
+
+form {
+    margin-top: 20px;
+}
+
+.Search {
+    display: flex;
+}
+
+/* -- petit encadrement comprenant l'icone localisation  -- */
+#Frame {
+    display: flex;
+    background-color: rgb(217 217 217);
+    height: 49px;
+    width: 49px;
+    margin: 10px 0px;
+    border-radius: 15px 0 0px 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ********** - Input Marseille, France -  *********** */
+
+input[type="text"] {
+    height: 49px;
+    padding: 10px;
+    font-size: 18px;
+    margin-top: 10px;
+    border: rgb(217 217 217) solid 1px;
+}
+
+::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+/* ************** Bouton Rechercher *********** */
+input[type="submit"] {
+    height: 49px;
+    width: 132px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    background-color: #0065FC;
+    color: white;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    cursor: pointer;
+}
+
+/* ********** Icone de Recherche Loupe pour formulaire en mobile ************ */
+.Search_Magnifier {
+    display: none;
+}
+
+
+/*  ***** toute la section du filtre avec la class SearchFilters ***** */
+.SearchFilters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 40px;
+    gap: 25px;
+    font-weight: 700;
+}
+
+/* .SearchFilters div  */
+.twoFilters {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+.SearchFilters h2 {
+    font-size: 20px;
+}
+
+.SearchFilters p {
+    display: flex;
+    height: 50px;
+    border: 2px solid #D9D9D9;
+    border-radius: 30px;
+    align-items: center;
+    padding: 18px;
+    cursor: pointer;
+}
+
+/* ******** couleur des icones et le padding vis à vis du texte******/
+.SearchFilters i {
+    color: #0065FC;
+    padding-right: 15px;
+}
+
+/* ************ Color HOOVER sur les boutons des Filtre **************/
+.twoFilters :hover {
+    background-color: #DEEBFF;
+}
+
+/* ********  SECTION ICONE INFORMATION   ******** */
+
+.info-icone {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* icone information i */
+.info-icone div p {
+    margin: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#info-circle {
+    display: flex;
+    background-color: aliceblue;
+    color: #0065FC;
+    height: 29px;
+    width: 29px;
+    border-radius: 50%;
+    border: lightslategray solid 1px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* *******   SECTIONS ET CARDS     ********** */
+
+.section-title {
+    margin: 0;
+    /* voir si ce margin est utile ou pas */
+    font-size: 22px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+    cursor: pointer;
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.card-subtitle {
+    font-size: 14px;
+}
+
+
+/******  Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.hebergements-and-populaires section {
+    background-color: #F2F2F2;
+    border-radius: 20px;
+    padding: 30px;
+}
+
+/****** Section Hebergements ***********/
+.hebergements {
+    width: 65%;
+}
+
+.hebergement-gallery {
+    margin-top: 33px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: center;
+}
+
+.hebergement-gallery .card {
+    width: 30%;
+}
+
+
+.hebergement-gallery img {
+    width: 100%;
+    height: 124px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.hebergement-gallery .card-content {
+    padding-top: 5px;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hebergement-gallery .card-subtitle {
+    margin-top: 5px;
+}
+
+.Stars_Container_1 {
+    color: #0065FC;
+    margin-top: 4px;
+    margin-bottom: 5px;
+}
+
+/*********** étoile notation opaque *******/
+.empty {
+    opacity: 0.2;
+}
+
+#more {
+    margin-top: 40px;
+    margin-left: 30px;
+}
+
+#more a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/****** Section Populaire ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-title i {
+    color: #0065FC;
+}
+
+.populaires-gallery .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-gallery img {
+    width: 33%;
+    height: 134px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-gallery .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.populaires-gallery .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+
+.populaires-gallery .card-subtitle {
+    /* margin: 0; */
+}
+
+.populaires-gallery .card-rating {
+    margin-bottom: 5px;
+}
+
+/* ###########  SECTION ACTIVITES A MARSEILLE ########## */
+
+.ActivitiesMarseille {
+    margin-top: 30px;
+    margin-bottom: 40px;
+}
+
+/*****  Conteneur de la card activité *******/
+.Card-activities {
+    width: 22%;
+    background-color: white;
+    border-radius: 20px;
+    padding: 2px;
+    box-shadow: 0px 3px 15px 0px #0000001A;
+    cursor: pointer;
+}
+
+
+/******  Photos des activités *******/
+.ActivitiesGallery img {
+    height: 85%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0px 0px;
+}
+
+/****** Nom de l'activité ********/
+.ActivitiesMarseille h3 {
+    margin-top: 8px;
+    padding-left: 14px;
+    font-size: 0.90em;
+}
+
+/******    Galerie activités à Marseille ********/
+.ActivitiesGallery {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/*  ########  LE FOOTER    ###### */
+
+.Footer {
+    background-color: #F2F2F2;
+    display: flex;
+    padding: 45px 0px;
+    justify-content: space-around;
+}
+
+.FooterBloc h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+footer ul a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+footer li {
+    font-size: 18px;
+    list-style-type: none;
+    margin-bottom: 12px;
+}
+
+/* ######################################################################### */
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+/****** Media queries ***********/
+
+@media screen and (max-width: 1024px) {
+
+    /* *****La section des filtres ***** */
+    .SearchFilters {
+        gap: 20px;
+    }
+
+    .twoFilters {
+        gap: 20px;
+    }
+
+    .SearchFilters p {
+        padding: 10px;
+    }
+
+    /* couleur icones et padding vis à vis du texte*/
+    .SearchFilters i {
+        color: #0065FC;
+        padding: 10px;
+    }
+
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-gallery {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-gallery .card {
+        width: 30%;
+    }
+
+
+    /* ****   Section Activités à Marseilles *******/
+
+    .Card-activities {
+        height: 267px;
+    }
+
+    .ActivitiesMarseille h3 {
+        margin-top: 2px;
+        font-size: 0.85em;
+    }
+}
+
+
+
+/* ###############  Mobile   ########################### */
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    .main-container {
+        padding: 0 1px;
+    }
+
+
+    .NavbarContainer {
+        flex-direction: column;
+        align-items: center;
+        background-color: #FFFFFF;
+    }
+
+    .NavbarContain {
+        margin: auto;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .NavbarContain a {
+        display: inline;        
+    }
+
+    .LogoBooki {
+        height: 19px;
+    }
+
+    /* ###  -- HOVER -- Effet de survol inversé -- ### */
+    #Hebergements :hover {
+        border-top: none;
+        border-bottom: solid #0065FC 3px;
+    }
+
+    #Activites :hover {
+        border-top: none;
+        border-bottom: solid #0065FC 3px;
+    }
+
+    /* **************--Titre de la page *************** */
+    .introduction h1 {
+        margin-bottom: 13px;
+        margin-top: 20px;
+    }
+
+
+    input[type="text"] {
+        width: 200px;
+    }
+
+    .introduction,
+    .SearchFilters,
+    .info-icone,
+    .Search {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+
+    /* -- Icone de recherche Loupe pour mobile -- */
+    .Search_Magnifier {
+        display: flex;
+        height: 49px;
+        padding: 16px;
+        margin-top: 10px;
+        font-size: 20px;
+        background-color: #0065FC;
+        color: white;
+        border-radius: 0px 15px 15px 0px;
+    }
+
+    /* -- Bouton Rechercher -- */
+    input[type="submit"] {
+        display: none;
+    }
+
+    /* **********  SECTION DES FILTRES ***********  */
+
+    /*  -- toute la section du filtre avec la class filtre -- */
+    .SearchFilters {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .twoFilters {
+        margin: auto;
+    }
+
+    .SearchFilters p {
+        width: 191px;
+        font-size: 14px;
+        padding: 7px;
+    }
+
+
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0px;
+        padding: 21px;
+    }
+
+    .section-title {
+        justify-content: space-between;
+    }
+
+    .populaires {
+        background-color: #F0F2F6;
+        width: 100%;
+        height: auto;
+    }
+
+    .populaires-gallery {
+        gap: 11px;
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+
+    .populaires-gallery .card {
+        width: 100%;
+    }
+
+    .hebergements {
+        background-color: #FFFFFF !important;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+    .hebergement-gallery {
+        flex-direction: column;
+    }
+
+    .hebergement-gallery .card {
+        width: 100%;
+    }
+
+    #more {
+        display: none;
+    }
+
+    .ActivitiesMarseille {
+        display: flex;
+        flex-direction: column;        
+        background-color: #FFFFFF !important;        
+        padding: 20px;
+    }
+    
+    .ActivitiesGallery {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;        
+    }
+
+    .Card-activities {
+        height: 190px;
+        width: 100%;
+    }
+
+    .ActivitiesGallery img {
+        height: 70%;
+        width: 100%;
+        border: 1px solid #D9D9D9;
+    }
+
+    /* Le Footer */
+    .Footer {
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .FooterBloc {
+        margin: 45px 0 20px 33px;
+    }
+
+}
